@@ -1,0 +1,23 @@
+.profile-card{
+    width: 40vw;
+    height: 40vh;
+    border: 2px solid gainsboro;
+    padding: 1% 2%;
+    left: 50%;
+    top: 45%;
+    position: absolute;
+    transform: translate(-50%,-50%) ;
+    border-radius: 4px;
+}
+
+.profile-picture{
+    border-radius: 50%;
+    width: 150px;
+    display: block;
+    margin: auto;
+}
+
+.style-btn{
+    font-size: 1em;
+    font-weight: normal;
+}
