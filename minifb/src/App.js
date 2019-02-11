@@ -17,8 +17,6 @@ class App extends Component {
         };
     }
 
-
-
     onSubmit = (value) => {
         this.setState(() => ({
             index : value,
@@ -27,6 +25,7 @@ class App extends Component {
 
     onSubmitLike = () => {
         this.state.tab[this.state.index][5] += 1;
+        this.forceUpdate();
     }
 
     render() {
@@ -44,8 +43,8 @@ class App extends Component {
                 />
                 <Post
                     lastpost={this.state.tab[this.state.index][4]}
-                    like={this.state.tab[this.state.index][5]}
                     onSubmitLike={this.onSubmitLike}
+                    like={this.state.tab[this.state.index][5]}
                 />
             </div>
         );

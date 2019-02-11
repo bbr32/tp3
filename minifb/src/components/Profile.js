@@ -36,7 +36,6 @@ class Profile extends React.Component {
 
     render() {
         return(
-
             <div className={"profile-card"} style={{backgroundColor: this.state.bgColor}}>
                 <img src={this.ppChoose()} alt="PP Bbr" className={"profile-picture"}/>
                 <p>

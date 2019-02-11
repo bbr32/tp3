@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './Post.css';
 
 class Post extends Component {
+
     handleClick(){
         this.props.onSubmitLike();
     }
@@ -13,7 +14,7 @@ class Post extends Component {
                 <p> {this.props.lastpost}</p>
                 <button onClick={() => this.handleClick()}>
                     Likes
-                    <span> {this.props.like}</span>
+                    <span> {this.props.like} </span>
                 </button>
             </div>
         );
