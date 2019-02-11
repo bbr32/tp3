@@ -1,7 +1,7 @@
 import React from 'react';
 import pp_bbr from "../img/pp_bbr.png";
 import pp_rafafou from "../img/pp_rafafou.png";
-import pp_jps from "../img/pp_jps.jpeg";
+import pp_ougo from "../img/pp_ougo.jpg";
 import './Profile.css';
 import './Button.css'
 
@@ -10,24 +10,37 @@ class Profile extends React.Component {
         super(props);
         this.state = {
             bgColor: "",
-            imageUrl: this.props.pp,
         }
     }
 
-    randomHexColor = (e) => {
+    randomHexColor = () => {
         let color = '#'+Math.floor(Math.random()*16777215).toString(16);
         this.setState({
             bgColor : color,
         });
     }
 
+    ppChoose() {
+        switch(this.props.pp){
+            case "pp_bbr":
+                return pp_bbr;
+                break;
+            case "pp_ougo":
+                return pp_ougo;
+                break;
+            case "pp_rafafou":
+                return pp_rafafou;
+                break;
+        }
+    }
+
     render() {
         return(
 
             <div className={"profile-card"} style={{backgroundColor: this.state.bgColor}}>
-                <img src={pp_jps} alt="PP Bbr" className={"profile-picture"}/>
+                <img src={this.ppChoose()} alt="PP Bbr" className={"profile-picture"}/>
                 <p>
-                    <b>Nom :</b> {this.props.firstname}
+                    <b>Nom : </b> {this.props.firstname}
                 </p>
                 <p>
                     <b>Prénom : </b>{this.props.lastname}
@@ -36,7 +49,7 @@ class Profile extends React.Component {
                     <b>Date de naissance : </b>{this.props.birth}
                 </p>
 
-                <button onClick={this.randomHexColor} className={"style-btn"}>
+                <button onClick={this.randomHexColor}>
                     Change style
                 </button>
             </div>

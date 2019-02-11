@@ -1,18 +1,11 @@
-.profile-card{
+.post-card{
     width: 40vw;
-    height: 45vh;
+    height: 20vh;
     border: 2px solid gainsboro;
     padding: 1% 2%;
     left: 50%;
-    top: 43%;
+    top: 83%;
     position: absolute;
     transform: translate(-50%,-50%) ;
     border-radius: 4px;
-}
-
-.profile-picture{
-    border-radius: 50%;
-    width: 150px;
-    display: block;
-    margin: auto;
 }

@@ -10,7 +10,7 @@ class Button extends React.Component {
     }
 
     handleClick(){
-        this.props.onSubmit(this.state.value).bind(this);
+        this.props.onSubmit(this.state.value);
     }
 
     render() {
